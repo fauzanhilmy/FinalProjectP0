@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: Open Sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: darkslateblue;
+    background-size: cover;
+}
+
+.judul {
+    color: yellow;
+    position: absolute;
+    top: 0px;
+    margin-top: -150px;
+    font-size: larger;
+}
+
+.judul1 {
+    color: rgb(31, 161, 212);
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 30px;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rules {
+    font-size: 20px !important;
+}
+
+.foto {
+    width: 700px;
+    height: 700px;
+}
+
+.mainbox {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.mainbox:after {
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url("assets/img/panahmerah.png") no-repeat;
+    background-size: 32px;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    overflow: visible;
+    transition: all ease 5s;
+}
+
+span {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+.span1 {
+    clip-path: polygon(0 92%, 100% 50%, 0 8%);
+    background-color: #ffeb3b;
+    top: 120px;
+    left: 0;
+}
+
+.span2 {
+    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+    background-color: violet;
+    top: 120px;
+    right: 0;
+}
+
+.span3 {
+    clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+    background-color: #4caf50;
+    bottom: 0;
+    left: 120px;
+}
+
+.span4 {
+    clip-path: polygon(50% 100%, 92% 0, 8% 0);
+    background-color: red;
+    top: 0;
+    left: 120px;
+}
+
+.box1 .span3 b {
+    transform: translate(-50%, -50%) rotate(-270deg);
+}
+
+.box1 .span1 b,
+.box2 .span1 b {
+    transform: translate(-50%, -50%) rotate(185deg);
+}
+
+.box2 .span3 b {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.box1 .span4 b,
+.box2 .span4 b {
+    transform: translate(-50%, -50%) rotate(-85deg);
+}
+
+.box2 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-135deg);
+}
+
+span b {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    border-radius: 50%;
+    font-size: 26px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+b {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: rgba(255, 166, 0, 0.945);
+    color: white;
+    box-shadow: 0 5px 20px black;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.spin:active {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+}
+
+.mainbox.animate:after {
+    animation: animateArrow 0.5s ease infinite;
+}
+
+@keyframes animateArrow {
+    50% {
+        right: -40px;
+    }
+}
+
+.footer {
+    color: white;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    bottom: 0px;
+    margin-bottom: 5px;
+}
